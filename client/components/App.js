@@ -8,6 +8,7 @@ const App = React.createClass({
                 <h1>
                     <Link to='/'>Instareact</Link>
                 </h1>
+                {React.cloneElement(this.props.children, this.props)}
             </div>
         );
     }
