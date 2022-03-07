@@ -12,7 +12,7 @@ const Single = React.createClass({
         return (
             <div className='single-photo'>
                 <Photo {...this.props} post={post} index={index}/>
-                <Comments postComments={postComments}/>
+                <Comments postComments={postComments} {...this.props}/>
             </div>
         );
     }

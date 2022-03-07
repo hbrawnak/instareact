@@ -4,7 +4,7 @@ import CommentForm from './CommentForm'
 const Comments = React.createClass({
     renderComment(comment, index) {
         return (
-            <div className="comment">
+            <div className="comment" key={index}>
                 <p>
                     <strong>{comment.user}</strong>
                     {comment.text}
@@ -18,7 +18,7 @@ const Comments = React.createClass({
         return (
             <div className="comments">
                 {this.props.postComments.map(this.renderComment)}
-                <CommentForm/>
+                <CommentForm {...this.props}/>
             </div>
         );
     }
